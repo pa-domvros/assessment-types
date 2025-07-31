@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formative vs. Summative Assessment</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            background-color: #F4F4F4;
+            margin: 0;
+            padding: 20px;
+            color: #333333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: beige;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .lang-toggle {
+            padding-top: 15px;
+            text-align: center;
+        }
+        .lang-toggle button {
+            background-color: #666;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: Georgia, serif;
+            font-size: 14px;
+        }
+        .lang-toggle button.active {
+            background-color: #4A90E2;
+        }
+        header {
+            text-align: center;
+            padding: 25px 0;
+            border-bottom: 1px solid #dddddd;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            width: 50%;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+        .column-formative {
+            background-color: #EAF2F8;
+        }
+        .column-summative {
+            background-color: #FDF5E6;
+        }
+        .column h2 {
+            padding: 12px;
+            border-radius: 5px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+        .formative-header {
+            background-color: #4A90E2;
+        }
+        .summative-header {
+            background-color: #F5A623;
+        }
+        .assessment-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d0d0d0;
+        }
+        .assessment-point:last-child {
+            border-bottom: none;
+        }
+        .assessment-point img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        .assessment-point .text strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333333;
+            color: #ffffff;
+        }
+        
+        /* Language handling CSS */
+        .lang-el, .lang-fr, .lang-de {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>
+                <span class="lang-en">Formative vs. Summative Assessment</span>
+                <span class="lang-el">Διαμορφωτική vs. Αθροιστική Αξιολόγηση</span>
+                <span class="lang-fr">Évaluation Formative vs. Évaluation Sommative</span>
+                <span class="lang-de">Formative vs. Summative Bewertung</span>
+            </h1>
+            <div class="lang-toggle">
+                <button id="btn-en" class="active">English</button>
+                <button id="btn-el">Ελληνικά</button>
+                <button id="btn-fr">Français</button>
+                <button id="btn-de">Deutsch</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="column column-formative">
+                <h2 class="formative-header">
+                    <span class="lang-en">Formative Assessment</span>
+                    <span class="lang-el">Διαμορφωτική Αξιολόγηση</span>
+                    <span class="lang-fr">Évaluation Formative</span>
+                    <span class="lang-de">Formative Bewertung</span>
+                </h2>
+                <div class="assessment-point">
+                    <img src="images/1.jpg" alt="Image for Ongoing & Continuous">
+                    <div class="text"><strong>
+                        <span class="lang-en">Ongoing & Continuous</span>
+                        <span class="lang-el">Συνεχής & Διαρκής</span>
+                        <span class="lang-fr">Continue et en cours</span>
+                        <span class="lang-de">Laufend & kontinuierlich</span>
+                    </strong><p>
+                        <span class="lang-en">Happens during instruction, not at the end.</span>
+                        <span class="lang-el">Πραγματοποιείται κατά τη διάρκεια της διδασκαλίας, όχι στο τέλος.</span>
+                        <span class="lang-fr">Se déroule pendant l'enseignement, pas à la fin.</span>
+                        <span class="lang-de">Findet während des Unterrichts statt, nicht am Ende.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/2.jpg" alt="Image for Embedded in Teaching">
+                    <div class="text"><strong>
+                        <span class="lang-en">Embedded in Teaching</span>
+                        <span class="lang-el">Ενσωματωμένη στη Διδασκαλία</span>
+                        <span class="lang-fr">Intégrée à l'enseignement</span>
+                        <span class="lang-de">In den Unterricht eingebettet</span>
+                    </strong><p>
+                        <span class="lang-en">Integrated into daily classroom activities, not separate from instruction.</span>
+                        <span class="lang-el">Εντάσσεται στις καθημερινές δραστηριότητες της τάξης, δεν είναι ξεχωριστή από τη διδασκαλία.</span>
+                        <span class="lang-fr">Fait partie des activités quotidiennes en classe, n'est pas séparée de l'enseignement.</span>
+                        <span class="lang-de">In die täglichen Unterrichtsaktivitäten integriert, nicht vom Unterricht getrennt.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/3.jpg" alt="Image for Feedback-Driven">
+                    <div class="text"><strong>
+                        <span class="lang-en">Feedback-Driven</span>
+                        <span class="lang-el">Καθοδηγούμενη από Ανατροφοδότηση</span>
+                        <span class="lang-fr">Axée sur le feedback</span>
+                        <span class="lang-de">Feedback-gesteuert</span>
+                    </strong><p>
+                        <span class="lang-en">Provides specific, actionable feedback that helps improve learning.</span>
+                        <span class="lang-el">Παρέχει συγκεκριμένη, πρακτική ανατροφοδότηση που βοηθά στη βελτίωση της μάθησης.</span>
+                        <span class="lang-fr">Fournit des commentaires spécifiques et exploitables qui aident à améliorer l'apprentissage.</span>
+                        <span class="lang-de">Liefert spezifisches, umsetzbares Feedback, das zur Verbesserung des Lernens beiträgt.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/4.jpg" alt="Image for Student-Centered">
+                    <div class="text"><strong>
+                        <span class="lang-en">Student-Centered</span>
+                        <span class="lang-el">Μαθητοκεντρική</span>
+                        <span class="lang-fr">Centrée sur l'étudiant</span>
+                        <span class="lang-de">Schülerzentriert</span>
+                    </strong><p>
+                        <span class="lang-en">Involves students in understanding goals, assessing their own learning, and using feedback to improve.</span>
+                        <span class="lang-el">Συμμετέχουν οι μαθητές στην κατανόηση των στόχων, στην αξιολόγηση της δικής τους μάθησης και στη χρήση της ανατροφοδότησης για βελτίωση.</span>
+                        <span class="lang-fr">Implique les étudiants dans la compréhension des objectifs, l'évaluation de leur propre apprentissage et l'utilisation du feedback pour s'améliorer.</span>
+                        <span class="lang-de">Bezieht die Schüler in das Verständnis der Ziele, die Bewertung ihres eigenen Lernens und die Nutzung von Feedback zur Verbesserung ein.</span>
+                   </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/5.jpg" alt="Image for Low Stakes">
+                    <div class="text"><strong>
+                        <span class="lang-en">Low Stakes</span>
+                        <span class="lang-el">Χαμηλού Ρίσκου</span>
+                        <span class="lang-fr">À faible enjeu</span>
+                        <span class="lang-de">Niedriger Einsatz</span>
+                    </strong><p>
+                        <span class="lang-en">Not used for grades; focus is on growth and improvement.</span>
+                        <span class="lang-el">Δεν χρησιμοποιείται για βαθμολογία· η έμφαση δίνεται στην ανάπτυξη και τη βελτίωση.</span>
+                        <span class="lang-fr">Non utilisée pour les notes; l'accent est mis sur la croissance et l'amélioration.</span>
+                        <span class="lang-de">Wird nicht für Noten verwendet; der Fokus liegt auf Wachstum und Verbesserung.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/6.jpg" alt="Image for Adaptable">
+                    <div class="text"><strong>
+                        <span class="lang-en">Adaptable</span>
+                        <span class="lang-el">Προσαρμόσιμη</span>
+                        <span class="lang-fr">Adaptable</span>
+                        <span class="lang-de">Anpassungsfähig</span>
+                    </strong><p>
+                        <span class="lang-en">Information gathered is used immediately to adjust teaching strategies.</span>
+                        <span class="lang-el">Οι πληροφορίες που συλλέγονται χρησιμοποιούνται άμεσα για την προσαρμογή των διδακτικών στρατηγικών.</span>
+                        <span class="lang-fr">Les informations recueillies sont utilisées immédiatement pour ajuster les stratégies d'enseignement.</span>
+                        <span class="lang-de">Die gesammelten Informationen werden sofort zur Anpassung der Lehrstrategien verwendet.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/7.jpg" alt="Image for Collaborative">
+                    <div class="text"><strong>
+                        <span class="lang-en">Collaborative</span>
+                        <span class="lang-el">Συνεργατική</span>
+                        <span class="lang-fr">Collaborative</span>
+                        <span class="lang-de">Kollaborativ</span>
+                    </strong><p>
+                        <span class="lang-en">Encourages peer and self-assessment to promote reflection and metacognition.</span>
+                        <span class="lang-el">Ενθαρρύνει την αξιολόγηση από ομοτίμους και την αυτοαξιολόγηση για την προώθηση του αναστοχασμού και της μεταγνώσης.</span>
+                        <span class="lang-fr">Encourage l'évaluation par les pairs et l'auto-évaluation pour promouvoir la réflexion et la métacognition.</span>
+                        <span class="lang-de">Fördert die Peer- und Selbstbewertung, um Reflexion und Metakognition zu fördern.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/8.jpg" alt="Image for Flexible in Format">
+                    <div class="text"><strong>
+                        <span class="lang-en">Flexible in Format</span>
+                        <span class="lang-el">Ευέλικτη στη Μορφή</span>
+                        <span class="lang-fr">Format flexible</span>
+                        <span class="lang-de">Flexibel im Format</span>
+                    </strong><p>
+                        <span class="lang-en">Can include questioning, discussions, observations, exit tickets, quizzes, rubrics, and more.</span>
+                        <span class="lang-el">Μπορεί να περιλαμβάνει ερωτήσεις, συζητήσεις, παρατηρήσεις, δελτία εξόδου, κουίζ, ρουμπρίκες και άλλα.</span>
+                        <span class="lang-fr">Peut inclure des interrogations, des discussions, des observations, des tickets de sortie, des quiz, des grilles d'évaluation, etc.</span>
+                        <span class="lang-de">Kann Befragungen, Diskussionen, Beobachtungen, Exit-Tickets, Quiz, Rubriken und mehr umfassen.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/9.jpg" alt="Image for Equity-Focused">
+                    <div class="text"><strong>
+                        <span class="lang-en">Equity-Focused</span>
+                        <span class="lang-el">Εστιασμένη στην Ισότητα</span>
+                        <span class="lang-fr">Axée sur l'équité</span>
+                        <span class="lang-de">Gerechtigkeitsorientiert</span>
+                    </strong><p>
+                        <span class="lang-en">Helps close learning gaps by addressing misunderstandings early.</span>
+                        <span class="lang-el">Βοηθά στο κλείσιμο των μαθησιακών κενών αντιμετωπίζοντας έγκαιρα τις παρεξηγήσεις.</span>
+                        <span class="lang-fr">Aide à combler les lacunes d'apprentissage en abordant les malentendus à un stade précoce.</span>
+                        <span class="lang-de">Hilft, Lernlücken zu schließen, indem Missverständnisse frühzeitig behoben werden.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/10.jpg" alt="Image for Goal-Oriented">
+                    <div class="text"><strong>
+                        <span class="lang-en">Goal-Oriented</span>
+                        <span class="lang-el">Προσανατολισμένη στο Στόχο</span>
+                        <span class="lang-fr">Axée sur les objectifs</span>
+                        <span class="lang-de">Zielorientiert</span>
+                    </strong><p>
+                        <span class="lang-en">Based on clearly defined learning objectives shared with students.</span>
+                        <span class="lang-el">Βασίζεται σε σαφώς καθορισμένους μαθησιακούς στόχους που μοιράζονται με τους μαθητές.</span>
+                        <span class="lang-fr">Basée sur des objectifs d'apprentissage clairement définis et partagés avec les étudiants.</span>
+                        <span class="lang-de">Basiert auf klar definierten Lernzielen, die den Schülern mitgeteilt werden.</span>
+                    </p></div>
+                </div>
+            </div>
+
+            <div class="column column-summative">
+                <h2 class="summative-header">
+                    <span class="lang-en">Summative Assessment</span>
+                    <span class="lang-el">Αθροιστική Αξιολόγηση</span>
+                    <span class="lang-fr">Évaluation Sommative</span>
+                    <span class="lang-de">Summative Bewertung</span>
+                </h2>
+                <div class="assessment-point">
+                    <img src="images/11.jpg" alt="Image for Evaluates Learning at the End">
+                    <div class="text"><strong>
+                        <span class="lang-en">Evaluates Learning at the End of a Unit/Period</span>
+                        <span class="lang-el">Αξιολογεί τη Μάθηση στο Τέλος μιας Ενότητας/Περιόδου</span>
+                        <span class="lang-fr">Évalue l'apprentissage à la fin d'une unité/période</span>
+                        <span class="lang-de">Bewertet das Lernen am Ende einer Einheit/Periode</span>
+                    </strong><p>
+                        <span class="lang-en">Summative assessments are typically given at the conclusion of a significant learning period, such as the end of a unit, chapter, course, or academic year.</span>
+                        <span class="lang-el">Οι αθροιστικές αξιολογήσεις δίνονται συνήθως στο τέλος μιας σημαντικής περιόδου μάθησης, όπως το τέλος μιας ενότητας, κεφαλαίου, μαθήματος ή ακαδημαϊκού έτους.</span>
+                        <span class="lang-fr">Les évaluations sommatives sont généralement administrées à la fin d'une période d'apprentissage significative, comme la fin d'une unité, d'un chapitre, d'un cours ou d'une année académique.</span>
+                        <span class="lang-de">Summative Bewertungen werden in der Regel am Ende eines bedeutenden Lernabschnitts durchgeführt, wie z.B. am Ende einer Einheit, eines Kapitels, eines Kurses oder eines akademischen Jahres.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/12.jpg" alt="Image for Measures Overall Achievement">
+                    <div class="text"><strong>
+                        <span class="lang-en">Measures Overall Achievement</span>
+                        <span class="lang-el">Μετρά τη Συνολική Επίδοση</span>
+                        <span class="lang-fr">Mesure la réussite globale</span>
+                        <span class="lang-de">Misst die Gesamtleistung</span>
+                    </strong><p>
+                        <span class="lang-en">Their primary purpose is to evaluate what students have learned and mastered over a period of time.</span>
+                        <span class="lang-el">Ο κύριος σκοπός τους είναι να αξιολογήσουν τι έχουν μάθει και κατακτήσει οι μαθητές σε μια χρονική περίοδο.</span>
+                        <span class="lang-fr">Leur objectif principal est d'évaluer ce que les étudiants ont appris et maîtrisé sur une période donnée.</span>
+                        <span class="lang-de">Ihr Hauptzweck besteht darin, zu bewerten, was die Schüler über einen bestimmten Zeitraum gelernt und gemeistert haben.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/13.jpg" alt="Image for High Stakes">
+                    <div class="text"><strong>
+                        <span class="lang-en">High Stakes</span>
+                        <span class="lang-el">Υψηλού Ρίσκου</span>
+                        <span class="lang-fr">À fort enjeu</span>
+                        <span class="lang-de">Hoher Einsatz</span>
+                    </strong><p>
+                        <span class="lang-en">The results of summative assessments often carry significant weight and are used for grading. They are generally considered "high stakes" because they determine a student's final performance.</span>
+                        <span class="lang-el">Τα αποτελέσματα των αθροιστικών αξιολογήσεων έχουν συχνά σημαντική βαρύτητα και χρησιμοποιούνται για βαθμολόγηση. Θεωρούνται γενικά "υψηλού ρίσκου" επειδή καθορίζουν την τελική επίδοση ενός μαθητή.</span>
+                        <span class="lang-fr">Les résultats des évaluations sommatives ont souvent un poids important et sont utilisés pour la notation. Ils sont généralement considérés comme "à fort enjeu" car ils déterminent la performance finale d'un étudiant.</span>
+                        <span class="lang-de">Die Ergebnisse summativer Bewertungen haben oft ein erhebliches Gewicht und werden zur Benotung verwendet. Sie gelten allgemein als "hoher Einsatz", da sie die endgültige Leistung eines Schülers bestimmen.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/14.jpg" alt="Image for Retrospective">
+                    <div class="text"><strong>
+                        <span class="lang-en">Retrospective</span>
+                        <span class="lang-el">Αναδρομική</span>
+                        <span class="lang-fr">Rétrospective</span>
+                        <span class="lang-de">Rückblickend</span>
+                    </strong><p>
+                        <span class="lang-en">They look back at what has been taught and learned, rather than focusing on ongoing learning.</span>
+                        <span class="lang-el">Εξετάζουν αναδρομικά τι έχει διδαχθεί και μαθευτεί, αντί να εστιάζουν στη συνεχιζόμενη μάθηση.</span>
+                        <span class="lang-fr">Elles portent sur ce qui a été enseigné et appris, plutôt que sur l'apprentissage en cours.</span>
+                        <span class="lang-de">Sie blicken auf das zurück, was gelehrt und gelernt wurde, anstatt sich auf das laufende Lernen zu konzentrieren.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/15.jpg" alt="Image for Standardized">
+                    <div class="text"><strong>
+                        <span class="lang-en">Standardized (Often)</span>
+                        <span class="lang-el">Τυποποιημένη (Συχνά)</span>
+                        <span class="lang-fr">Standardisée (souvent)</span>
+                        <span class="lang-de">Standardisiert (oft)</span>
+                    </strong><p>
+                        <span class="lang-en">While not exclusively, summative assessments are often standardized tests to ensure consistency and comparability.</span>
+                        <span class="lang-el">Αν και όχι αποκλειστικά, οι αθροιστικές αξιολογήσεις είναι συχνά τυποποιημένα τεστ για να διασφαλιστεί η συνέπεια και η συγκρισιμότητα.</span>
+                        <span class="lang-fr">Bien que non exclusivement, les évaluations sommatives sont souvent des tests standardisés pour garantir la cohérence et la comparabilité.</span>
+                        <span class="lang-de">Obwohl nicht ausschließlich, sind summative Bewertungen oft standardisierte Tests, um Konsistenz und Vergleichbarkeit zu gewährleisten.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/16.jpg" alt="Image for Individualized Performance">
+                    <div class="text"><strong>
+                        <span class="lang-en">Individualized Performance</span>
+                        <span class="lang-el">Ατομική Επίδοση</span>
+                        <span class="lang-fr">Performance individuelle</span>
+                        <span class="lang-de">Individuelle Leistung</span>
+                    </strong><p>
+                        <span class="lang-en">They typically focus on individual student performance rather than collaborative learning.</span>
+                        <span class="lang-el">Συνήθως εστιάζουν στην ατομική επίδοση του μαθητή παρά στη συνεργατική μάθηση.</span>
+                        <span class="lang-fr">Elles se concentrent généralement sur la performance individuelle de l'étudiant plutôt que sur l'apprentissage collaboratif.</span>
+                        <span class="lang-de">Sie konzentrieren sich in der Regel auf die individuelle Schülerleistung und nicht auf das kollaborative Lernen.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/17.jpg" alt="Image for Less Frequent">
+                    <div class="text"><strong>
+                        <span class="lang-en">Less Frequent</span>
+                        <span class="lang-el">Λιγότερο Συχνή</span>
+                        <span class="lang-fr">Moins fréquente</span>
+                        <span class="lang-de">Weniger häufig</span>
+                    </strong><p>
+                        <span class="lang-en">Compared to formative assessments, summative assessments are administered less frequently.</span>
+                        <span class="lang-el">Σε σύγκριση με τις διαμορφωτικές αξιολογήσεις, οι αθροιστικές αξιολογήσεις διεξάγονται λιγότερο συχνά.</span>
+                        <span class="lang-fr">Comparées aux évaluations formatives, les évaluations sommatives sont administrées moins fréquemment.</span>
+                        <span class="lang-de">Im Vergleich zu formativen Bewertungen werden summative Bewertungen seltener durchgeführt.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/18.jpg" alt="Image for Provides a Snapshot">
+                    <div class="text"><strong>
+                        <span class="lang-en">Provides a "Snapshot"</span>
+                        <span class="lang-el">Παρέχει ένα "Στιγμιότυπο"</span>
+                        <span class="lang-fr">Fournit un "instantané"</span>
+                        <span class="lang-de">Bietet eine "Momentaufnahme"</span>
+                    </strong><p>
+                        <span class="lang-en">They offer a snapshot of a student's knowledge and skills at a specific point in time.</span>
+                        <span class="lang-el">Προσφέρουν ένα στιγμιότυπο των γνώσεων και των δεξιοτήτων ενός μαθητή σε μια συγκεκριμένη χρονική στιγμή.</span>
+                        <span class="lang-fr">Elles offrent un aperçu des connaissances et des compétences d'un étudiant à un moment précis.</span>
+                        <span class="lang-de">Sie bieten eine Momentaufnahme des Wissens und der Fähigkeiten eines Schülers zu einem bestimmten Zeitpunkt.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/19.jpg" alt="Image for Limited Immediate Feedback">
+                    <div class="text"><strong>
+                        <span class="lang-en">Limited Immediate Feedback</span>
+                        <span class="lang-el">Περιορισμένη Άμεση Ανατροφοδότηση</span>
+                        <span class="lang-fr">Feedback immédiat limité</span>
+                        <span class="lang-de">Begrenztes sofortiges Feedback</span>
+                    </strong><p>
+                        <span class="lang-en">Feedback is usually to inform the student of their final grade, not to guide immediate instructional adjustments. Any feedback given would be for future learning.</span>
+                        <span class="lang-el">Η ανατροφοδότηση συνήθως σκοπό έχει να ενημερώσει τον μαθητή για τον τελικό του βαθμό, όχι να καθοδηγήσει άμεσες διδακτικές προσαρμογές. Οποιαδήποτε ανατροφοδότηση δίνεται αφορά τη μελλοντική μάθηση.</span>
+                        <span class="lang-fr">Le feedback vise généralement à informer l'étudiant de sa note finale, pas à guider des ajustements pédagogiques immédiats. Tout feedback donné serait pour l'apprentissage futur.</span>
+                        <span class="lang-de">Das Feedback dient in der Regel dazu, den Schüler über seine Endnote zu informieren, nicht um sofortige Unterrichtsanpassungen zu leiten. Jedes gegebene Feedback wäre für zukünftiges Lernen.</span>
+                    </p></div>
+                </div>
+                <div class="assessment-point">
+                    <img src="images/20.jpg" alt="Image for Accountability">
+                    <div class="text"><strong>
+                        <span class="lang-en">Accountability</span>
+                        <span class="lang-el">Λογοδοσία</span>
+                        <span class="lang-fr">Responsabilisation</span>
+                        <span class="lang-de">Rechenschaftspflicht</span>
+                    </strong><p>
+                        <span class="lang-en">They are often used for accountability purposes, such as evaluating the effectiveness of a curriculum, a teacher, or a school.</span>
+                        <span class="lang-el">Χρησιμοποιούνται συχνά για σκοπούς λογοδοσίας, όπως η αξιολόγηση της αποτελεσματικότητας ενός προγράμματος σπουδών, ενός εκπαιδευτικού ή ενός σχολείου.</span>
+                        <span class="lang-fr">Elles sont souvent utilisées à des fins de reddition de comptes, comme l'évaluation de l'efficacité d'un programme, d'un enseignant ou d'une école.</span>
+                        <span class="lang-de">Sie werden oft zu Rechenschaftszwecken verwendet, wie z.B. zur Bewertung der Wirksamkeit eines Lehrplans, eines Lehrers oder einer Schule.</span>
+                    </p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <i>
+            <span class="lang-en">Devised by Panagiotis Domvros, English and Drama Teacher</span>
+            <span class="lang-el">Επιμέλεια: Παναγιώτης Δόμβρος, Εκπαδευτικός Αγγλικών - Θεατρολόγος</span>
+            <span class="lang-fr">Conçu par Panagiotis Domvros, professeur d'anglais et d'art dramatique</span>
+            <span class="lang-de">Entwickelt von Panagiotis Domvros, Lehrer für Englisch und Darstellendes Spiel</span>
+        </i>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = {
+            en: document.getElementById('btn-en'),
+            el: document.getElementById('btn-el'),
+            fr: document.getElementById('btn-fr'),
+            de: document.getElementById('btn-de')
+        };
+
+        const langElements = document.querySelectorAll('.lang-en, .lang-el, .lang-fr, .lang-de');
+
+        function switchLanguage(lang) {
+            // Hide all elements
+            langElements.forEach(el => {
+                el.style.display = 'none';
+            });
+
+            // Show elements for the selected language
+            document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+                el.style.display = 'inline'; // Use 'inline' to not break layout
+            });
+            
+            // Handle block elements like paragraphs and headers specifically
+            document.querySelectorAll(`h1 .lang-${lang}, h2 .lang-${lang}, p .lang-${lang}, strong .lang-${lang}`).forEach(el => {
+                el.style.display = 'block';
+            });
+            
+             // For footer <i> tag
+            document.querySelectorAll(`footer i .lang-${lang}`).forEach(el => {
+                el.style.display = 'inline';
+            });
+
+            // Update active button
+            Object.values(buttons).forEach(button => button.classList.remove('active'));
+            buttons[lang].classList.add('active');
+        }
+
+        buttons.en.addEventListener('click', () => switchLanguage('en'));
+        buttons.el.addEventListener('click', () => switchLanguage('el'));
+        buttons.fr.addEventListener('click', () => switchLanguage('fr'));
+        buttons.de.addEventListener('click', () => switchLanguage('de'));
+
+        // Set initial language
+        switchLanguage('en');
+    });
+</script>
+
+</body>
+</html>
